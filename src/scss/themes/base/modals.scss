@@ -1,0 +1,415 @@
+@import 'vars.scss';
+
+#{$widgetSelector} {
+  .sp-modal-fade-enter,
+  .sp-modal-fade-leave-active {
+    opacity: 0;
+  }
+
+  .sp-modal-fade-enter-active,
+  .sp-modal-fade-leave-active {
+    transition: opacity 0.2s ease;
+  }
+
+  .sp-modal-backdrop {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sp-modal {
+    background: #ffffff;
+    box-shadow: 0 0 10px -1px;
+    overflow-x: auto;
+    position: relative;
+    max-width: 40%;
+    min-width: 360px;
+    min-height: 140px;
+    max-height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sp-modal-header {
+    text-align: center;
+    padding: 2em 1.5em 1.5em;
+
+    .sp-title {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+  }
+
+  .sp-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    color: inherit;
+    svg {
+      width: 1.6em;
+      height: 1.6em;
+    }
+  }
+
+  .sp-modal-close:active,
+  .sp-modal-close:hover {
+    color: black;
+  }
+
+  .sp-modal-body {
+    position: relative;
+    padding: 0 1.5em 1.5em;
+
+    .apply-to-items {
+      display: flex;
+      flex-direction: column;
+
+      .apply-type {
+        margin-bottom: 2em;
+        align-self: center;
+
+        .apply-type-option {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.6em;
+
+          input {
+            margin-right: 0.5em;
+          }
+          label {
+            cursor: pointer;
+          }
+          span {
+            font-size: $fontSizeBase;
+            color: $colorPrimaryText;
+            a {
+              font-size: inherit;
+            }
+          }
+        }
+      }
+
+      .items {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin-bottom: 2em;
+
+        .item {
+          display: flex;
+          align-items: center;
+          margin: 1em 2em;
+          width: 10%;
+
+          .sp-product-image {
+            margin: 0 1em 0 0;
+            img {
+              width: 4em;
+              height: 4em;
+              border: 1px solid $colorLightGrey;
+            }
+          }
+          .sp-product-header {
+            margin-right: 1em;
+            .sp-product-title {
+              font-size: $fontSizeBase;
+            }
+          }
+        }
+      }
+
+      .items:after {
+        content: '';
+        width: 10%;
+      }
+    }
+
+    .button-bar {
+      max-width: 86%;
+      margin: 3em auto 2em;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .sp-link,
+      .sp-button {
+        margin-left: 2em;
+      }
+    }
+  }
+
+  /* Fixed Price Modal */
+  .sp-fixed-price-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sp-fixed-price-input {
+      margin: 3em 2em 2em;
+    }
+  }
+
+  /* Coupon Modal */
+  .sp-coupon-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sp-coupon-input {
+      margin: 4em;
+    }
+  }
+
+  /* Choose Address Modal */
+  .sp-choose-address-form {
+    .sp-address-choice {
+      margin: 0 0 2em 0;
+      padding: 1em;
+      border: 2px solid $colorLightGrey;
+
+      address {
+        font-style: normal;
+        font-size: $fontSizeBase;
+        font-weight: bold;
+      }
+      .sp-address-choice-links {
+        margin-top: 0.5em;
+        .sp-link {
+          margin-right: 2em;
+        }
+      }
+    }
+    .sp-address-choice.active {
+      box-shadow: 0 0 0 2px $colorLink;
+    }
+    .sp-add-new-address a {
+      display: flex;
+      align-items: center;
+      margin: 1em;
+      span {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  /* Delete Address Modal */
+  .delete-address-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: $fontSizeBase;
+      a {
+        font-size: inherit;
+      }
+    }
+    .sp-button {
+      margin: 2em 0 1em;
+    }
+    .sp-link {
+      margin-bottom: 2em;
+    }
+  }
+
+  /* Choose Payment Method Modal */
+  .sp-choose-payment-method-form {
+    .sp-payment-method-choice {
+      margin: 0 0 2em 0;
+      padding: 1em;
+      border: 2px solid $colorLightGrey;
+
+      .sp-payment-method-text span {
+        font-style: normal;
+        font-size: $fontSizeBase;
+        margin-right: 1em;
+      }
+      .sp-payment-method-links {
+        padding: 10px;
+        margin-top: 0.5em;
+        .sp-link {
+          margin-right: 2em;
+        }
+      }
+    }
+    .sp-payment-method-choice.active {
+      box-shadow: 0 0 0 2px $colorLink;
+    }
+    .sp-add-new-credit-card a {
+      display: flex;
+      align-items: center;
+      margin: 1em;
+      span {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  /* Delete Payment Method Modal */
+  .delete-payment-method-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: $fontSizeBase;
+      a {
+        font-size: inherit;
+      }
+    }
+    .sp-button {
+      margin: 2em 0 1em;
+    }
+    .sp-link {
+      margin-bottom: 2em;
+    }
+  }
+
+  /* Edit Address Modal */
+  .edit-address-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p.edit-address-text {
+      font-size: $fontSizeBase;
+      a {
+        font-size: inherit;
+      }
+    }
+  }
+  /* Cancel Modal */
+  .cancel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin: 0 0 1em;
+      width: 82%;
+      font-size: $fontSizeBase;
+      text-align: center;
+      line-height: 150%;
+    }
+
+    .items {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2em;
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin: 2em 2em 1em;
+
+        .sp-product-image {
+          margin: 0 2em 0 0;
+          img {
+            width: 6em;
+            height: 6em;
+            border: 1px solid $colorLightGrey;
+          }
+        }
+        .sp-product-header {
+          margin-right: 1em;
+          .sp-product-title {
+            margin: 0;
+            font-size: $fontSizeBase;
+          }
+        }
+      }
+    }
+
+    .button-bar {
+      margin-top: 1em;
+
+      .sp-button {
+        margin: 0 1em;
+      }
+      .sp-btn-remove {
+        background: $colorRed;
+      }
+    }
+
+    .fine-print {
+      margin: 0 0 2em;
+      font-size: $fontSizeBase * 0.8;
+      color: $colorLightGrey;
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  /* Skip Modal */
+  .skip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p.skip-text {
+      margin: 0 0 2em;
+      width: 88%;
+      font-size: $fontSizeBase;
+      text-align: center;
+      line-height: 150%;
+    }
+
+    p.skip-date {
+      margin: 0 0 0.5em;
+      font-size: $fontSizeBase;
+    }
+
+    .new-next-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      border: 1px solid $colorLightGrey;
+      padding: 1em 3em;
+      background-color: #dedede;
+
+      .new-next-text {
+        font-size: $fontSizeBase;
+        text-transform: uppercase;
+        color: $colorLightGrey;
+        font-weight: bold;
+        letter-spacing: -1px;
+      }
+      .next-next-date {
+        margin: 0 0 1em;
+        font-size: $fontSizeHead * 1.2;
+        color: $colorLink;
+        font-weight: bold;
+      }
+    }
+
+    .sp-button {
+      margin: 2em 0 1em;
+    }
+    .sp-link {
+      margin-bottom: 2em;
+    }
+  }
+
+  /* Media queries */
+  @include respond(phone) {
+    .sp-modal {
+      max-width: none;
+      min-width: auto;
+      width: 100%;
+    }
+  }
+}

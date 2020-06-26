@@ -1,0 +1,185 @@
+@import 'vars.scss';
+
+#{$widgetSelector} {
+  /* Top text "section" */
+  .sp-top-text {
+    font-size: $fontSizeBase;
+  }
+  .sp-no-subscriptions {
+    font-size: $fontSizeHead;
+  }
+
+  /* Status area */
+  .sp-status {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border: 2px solid $colorLightGrey;
+    border-bottom: 0;
+
+    span {
+      text-align: center;
+      font-weight: bold;
+      font-size: $fontSizeBase * 0.8;
+      line-height: $fontSizeBase * 0.8;
+    }
+    svg {
+      margin-right: 1em;
+    }
+  }
+  .sp-status.error {
+    background-color: $colorErrorBackground;
+
+    svg {
+      color: $colorRed;
+    }
+  }
+  .sp-status.paused {
+    background-color: $colorPausedBackground;
+  }
+
+  /* Qty Select */
+  .sp-quantity .sp-field {
+    width: 6em;
+  }
+
+  /* Next Date Input */
+  .sp-next-date.sp-field {
+    display: block;
+    width: 17em;
+    input {
+      width: 100%;
+    }
+  }
+
+  /* Frequency Select */
+  .sp-frequency {
+    .sp-field {
+      width: 8em;
+      margin: 0;
+      input {
+        width: 100%;
+      }
+    }
+    .sp-field.sp-custom-select {
+      width: 11em;
+    }
+    .sp-read-only-text {
+      margin-left: 0.5em;
+      line-height: 1;
+    }
+  }
+
+  /* Expander */
+  .sp-expander {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .sp-expander-text {
+      margin: 0;
+      color: $colorLightGrey;
+      font-size: $fontSizeBase;
+      font-weight: 600;
+    }
+    svg {
+      color: $colorLink;
+      box-shadow: 0 0 2px #888;
+      border-radius: 50%;
+      padding: 0.4em;
+      width: 2.2em;
+      height: 2.2em;
+      margin-right: 1em;
+    }
+  }
+
+  /* Product Info Section */
+  .sp-product-info {
+    display: flex;
+    .sp-product-image {
+      margin: 0 1em 0 0;
+      img {
+        width: 8em;
+        height: 8em;
+        border: 1px solid $colorLightGrey;
+      }
+    }
+    .sp-product-header-and-options {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1em;
+      .sp-product-title {
+        font-size: $fontSizeTitle;
+        margin: 0;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+      }
+      .sp-product-price {
+        margin: 0;
+      }
+    }
+  }
+
+  /* Product/Subscription Options */
+  .sp-subscription-options {
+    margin-top: 1em;
+    .sp-subscription-option {
+      margin-bottom: 1.5em;
+      .sp-field {
+        margin: 0;
+      }
+    }
+  }
+
+  /* Shipping Section */
+  .sp-subscription-shipping {
+    address {
+      font-style: normal;
+      font-weight: bold;
+      font-size: $fontSizeBase;
+    }
+  }
+
+  /* Billing Section */
+  .sp-subscription-billing {
+    address {
+      font-style: normal;
+      font-weight: bold;
+      font-size: $fontSizeBase;
+    }
+  }
+
+  /* Payment Section */
+  .sp-subscription-payment {
+    span {
+      font-size: $fontSizeBase;
+    }
+    .sp-customer-facing-name {
+      display: block;
+    }
+  }
+
+  /* Actions Section */
+  ul.sp-subscription-actions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 9em;
+    li {
+      margin: 0 0 1em 0;
+      width: 100%;
+      display: block;
+      a {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  /* Coupon Section */
+  .sp-coupon-code {
+    font-size: $fontSizeBase;
+    font-weight: bold;
+  }
+}

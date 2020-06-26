@@ -1,0 +1,90 @@
+@import 'vars.scss';
+
+#{$widgetSelector} {
+  .sp-phone-group-layout {
+    margin-bottom: 1em;
+    .sp-group-summary {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      border: 1px solid $colorLightGrey;
+      border-bottom-color: #eee;
+      .sp-subscription-info {
+        display: flex;
+      }
+    }
+    .sp-group-middle {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid $colorLightGrey;
+      border-top: 0;
+      padding: 1em;
+      .sp-group-middle-left {
+        .sp-next-date {
+          margin-bottom: 2em;
+        }
+        .sp-frequency {
+          margin-bottom: 1em;
+        }
+      }
+      .sp-group-middle-right {
+        .sp-subscription-actions {
+          margin-top: 1em;
+        }
+      }
+    }
+    .sp-group-item {
+      display: flex;
+      flex-direction: column;
+      .sp-group-item-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        border: 1px solid $colorLightGrey;
+        border-top: 0;
+        border-bottom: 0;
+      }
+      .sp-group-item-middle {
+        border: 1px solid $colorLightGrey;
+        border-top: 0;
+        border-bottom: 0;
+        padding: 1em;
+      }
+      .sp-group-item-bottom {
+        border: 1px solid $colorLightGrey;
+        border-top: 0;
+        padding: 1em;
+      }
+      .sp-subscription-actions {
+        align-self: flex-start;
+        li {
+          a {
+            text-align: start;
+          }
+        }
+      }
+    }
+    .sp-expander {
+      margin: 0;
+      padding: 0.8em 2em;
+      border: 1px solid $colorLightGrey;
+      border-top: 0;
+    }
+    .sp-subscription-expanded {
+      display: flex;
+      padding: 1em;
+      border: 1px solid $colorLightGrey;
+      border-top: 0;
+      div {
+        margin-left: 6em;
+      }
+      div:first-child {
+        margin-left: 2em;
+      }
+    }
+    /* Adjustment for field margin */
+    .sp-field {
+      margin: 0;
+    }
+  }
+}

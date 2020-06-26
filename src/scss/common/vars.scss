@@ -1,0 +1,21 @@
+/*
+ * vars.scss - SCSS Variables for including in whole project
+ */
+
+/* Selector for the main widget div */
+$widgetSelector: '#sp-my-subscriptions';
+
+/* Color */
+$colorLightGrey: #ccc !default;
+$colorLink: #00a2e1 !default;
+$colorPrimaryText: #2c3e50 !default;
+$colorRed: #cc4a40 !default;
+$colorErrorBackground: #f4dfde !default;
+$colorPausedBackground: #dfe2ea !default;
+$colorItemBackground: #fefafa !default;
+
+/* Font variables */
+$fontStyle: 'Avenir', Helvetica, Arial, sans-serif !default;
+$fontSizeBase: 1.4em !default;
+$fontSizeTitle: 1.6em !default;
+$fontSizeHead: 1.8em !default;

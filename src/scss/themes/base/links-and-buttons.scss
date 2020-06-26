@@ -1,0 +1,85 @@
+/*
+ * links-and-buttons.scss
+ */
+
+@import 'vars.scss';
+
+#{$widgetSelector} {
+  /* Links */
+  a,
+  a:visited,
+  a:link {
+    color: $colorLink;
+    text-decoration: none;
+    transition: background 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53),
+      color 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+    font-size: $fontSizeBase;
+  }
+  a:active,
+  a:hover {
+    color: #0089bf;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Buttons */
+  button {
+    font-size: $fontSizeBase;
+  }
+  a.sp-button {
+    padding: 0.6em 1.4em;
+    white-space: nowrap;
+    border: 1px solid #aaa;
+    background-color: $colorLightGrey;
+    transition: background 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53),
+      color 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+    position: relative;
+    outline: 0;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: $fontSizeBase;
+    cursor: pointer;
+  }
+  a.sp-button:hover,
+  a.sp-button:active {
+    background-color: #fff;
+    color: $colorPrimaryText;
+  }
+  .sp-btn-primary {
+    color: white;
+    background: #47b0eb;
+    border: 1px solid #47b0eb;
+    padding: 0.6em 1.4em;
+    transition: background 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53),
+      color 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  }
+  .sp-btn-primary:hover,
+  .sp-btn-primary:active {
+    background: #0089bf;
+  }
+  .sp-btn-link {
+    background: #fff;
+    padding: 0.7em 1.5em;
+    transition: color 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+    color: $colorLink;
+  }
+  .sp-btn-link:hover,
+  .sp-btn-link:active {
+    color: #0089bf;
+  }
+  .sp-btn-danger {
+    color: white;
+    background: #cc4a40;
+    border: 1px solid #cc4a40;
+    padding: 0.6em 1.4em;
+    transition: background 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53),
+      color 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  }
+  .sp-btn-danger:hover,
+  .sp-btn-danger:active {
+    background: #c84035;
+  }
+}

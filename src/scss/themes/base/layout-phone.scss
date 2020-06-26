@@ -1,0 +1,83 @@
+@import 'vars.scss';
+
+#{$widgetSelector} {
+  .sp-phone-layout {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    .sp-subscription-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      border: 1px solid $colorLightGrey;
+      border-bottom-color: #eee;
+      .sp-quantity {
+        margin-bottom: 2em;
+      }
+    }
+    .sp-subscription-upper-middle {
+      border: 1px solid $colorLightGrey;
+      border-top: 0;
+      border-bottom: 0;
+      padding: 1em;
+    }
+    .sp-subscription-middle {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid $colorLightGrey;
+      border-top: 0;
+      border-bottom: 0;
+      padding: 1em;
+      .sp-subscription-middle-right {
+        .sp-subscription-actions {
+          margin-top: 1em;
+        }
+      }
+    }
+    .sp-subscription-bottom {
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      border: 1px solid $colorLightGrey;
+      border-top: 0;
+      border-bottom: 0;
+      .sp-subscription-shipping {
+        margin: 1em 0;
+      }
+      .sp-subscription-billing {
+        margin: 1em 0;
+      }
+      .sp-subscription-payment {
+        margin: 1em 0;
+      }
+      .sp-subscription-coupon {
+        margin: 1em 0;
+      }
+    }
+    .sp-expander {
+      padding: 1em 2em;
+      border: 1px solid $colorLightGrey;
+      .sp-expander-text {
+        color: $colorLink;
+      }
+    }
+    /* Adjustment for field margin */
+    .sp-field {
+      margin: 0;
+    }
+  }
+  .sp-phone-layout.is-expanded {
+    .sp-subscription-middle {
+      .sp-subscription-middle-left {
+        .sp-next-date {
+          margin-bottom: 2em;
+        }
+      }
+    }
+  }
+  /* Media queries */
+  @include respond(phone) {
+    padding: 0 1em;
+  }
+}

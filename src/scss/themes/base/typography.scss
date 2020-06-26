@@ -1,0 +1,23 @@
+/*
+ * typography.scss - Typography-related styles
+ */
+
+@import 'vars.scss';
+
+#{$widgetSelector} {
+  /* Fonts */
+  font-family: $fontStyle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $colorPrimaryText;
+
+  /* Block title */
+  .sp-block-title {
+    margin: 0;
+    text-transform: uppercase;
+    color: $colorLightGrey;
+    font-weight: bold;
+    font-size: $fontSizeBase;
+    letter-spacing: -1px;
+  }
+}
