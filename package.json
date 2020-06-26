@@ -1,0 +1,25 @@
+{
+  "name": "hosted-my-subscriptions-themes-sass",
+  "version": "1.0.0",
+  "description": "Package of Sass themes, designed to be compiled and run externally to the hosted My Subscriptions widget.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subscribepro/hosted-my-subscriptions-themes-sass.git"
+  },
+  "keywords": [
+    "Subscribe",
+    "Pro",
+    "subscription",
+    "commerce"
+  ],
+  "author": "Garth Brantley <garth.brantley@subscribepro.com> (https://twitter.com/garthbrantley)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subscribepro/hosted-my-subscriptions-themes-sass/issues"
+  },
+  "homepage": "https://www.subscribepro.com/"
+}
